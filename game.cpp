@@ -1,5 +1,10 @@
 #include "game.h"
 
+/* Set the difficulty level accordingly
+ * 1 is the easiest level (You can beat it easily)
+ */
+#define DIFFICULTY_LEVEL 5
+
 // Declaration of functions to be used for playing this game
 void performMove(class Board& board, int lvl, bool player);
 int bestPossibleMove(class Board& board, int lvl, bool player, int *x, int *y);
@@ -9,7 +14,7 @@ int main(int argc, char const *argv[])
 {
 	Board board;
 	bool aiPlayer,humanPlayer;
-	int lvl=100,dec;
+	int lvl = DIFFICULTY_LEVEL,dec;
 	cout << "Welcome to Tic-Tac-Toe\nWhat do you wish to play as:(1)X\t(2)O\n";
 	cin >> dec;
 	if(dec == 1) {
